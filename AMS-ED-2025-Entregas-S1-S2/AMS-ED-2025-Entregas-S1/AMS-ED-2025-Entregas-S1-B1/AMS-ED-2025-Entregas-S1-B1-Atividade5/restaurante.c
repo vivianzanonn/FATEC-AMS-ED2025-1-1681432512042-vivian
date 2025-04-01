@@ -1,3 +1,11 @@
+/*----------------------------------------------------------------------------------*/
+/*   FATEC-São Caetano do Sul                 Estrutura de Dados                    */
+/*                         Id da Atividade: S1-B1 Atividade 5                       */
+/*             Objetivo: <<  Restaurante com pilha  >>                              */
+/*                                                                                  */
+/*                                  Autor: vivian zanon                             */
+/*                                                                   Data:01/04/2025*/
+/*----------------------------------------------------------------------------------*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -27,7 +35,7 @@ Pedido* criarPedido(int numero, char cliente[], char descricao[], int quantidade
 }
 
 void inserirPedido(Pedido** head, Pedido* novo) {
-    novo->prox = *head;  // Insere no início (topo da pilha)
+    novo->prox = *head;  
     *head = novo;
 }
 
@@ -37,7 +45,7 @@ Pedido* removerPedido(Pedido** head) {
         return NULL;
     }
     Pedido* pedidoRemovido = *head;
-    *head = pedidoRemovido->prox;  // Remove o topo da pilha
+    *head = pedidoRemovido->prox; 
     return pedidoRemovido;
 }
 
